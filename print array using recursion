@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+void printarry(int arr[],int i,int n){
+    if(i>=n){
+        return ;
+    }
+    cout<<arr[i]<<" ";
+    printarry(arr,i+1,n);
+}
+
+int main()
+{
+int arr[]={10,20,30,40,50};
+int i=0;
+int n=5;
+printarry(arr,i,n);
+
+    return 0;
+}
