@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+bool sorted(int arr[],int i,int n){
+    //base case
+    if(i==n-1){
+        return true;
+    }
+    if(arr[i+1]<arr[i]){
+        return false;
+    }
+    sorted(arr,i+1,n);
+    
+}
+
+int main()
+{
+int arr[]={10,20,80,40,50};
+int n=5;
+int i=0;
+int ans=sorted(arr,i,n);
+if(ans==1){
+    cout<<"the array is sorted";
+}
+else{
+    cout<<"array is not sorted";
+}
+
+    return 0;
+}
