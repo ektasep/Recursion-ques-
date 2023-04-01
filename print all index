@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+void checkkey(string& str,int& n,char key,int i){
+    //base case
+    if(i>=n){
+        return ;
+    }
+    if(str[i]==key){
+        cout<<"element found at"<<i<<endl;
+    }
+    checkkey(str,n,key,i+1);
+    
+    
+    
+}
+
+int main()
+{
+string str="lovebabbar";
+int n=str.length();
+char key='b';
+int i=0;
+
+checkkey(str,n,key,i);
+
+
+    return 0;
+}
