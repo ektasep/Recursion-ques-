@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+void checkkey(string& str,int& n,char key,int i,vector<int>& ans){
+    //base case
+    if(i>=n){
+        return ;
+    }
+    if(str[i]==key){
+        ans.push_back(i);
+    }
+    checkkey(str,n,key,i+1,ans);
+    
+    
+    
+}
+
+int main()
+{
+string str="lovebabbar";
+int n=str.length();
+char key='b';
+int i=0;
+vector<int> ans;
+checkkey(str,n,key,i,ans);
+for(int val : ans ){
+    cout<<val<<" ";
+}
+
+
+    return 0;
+}
