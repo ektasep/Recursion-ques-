@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+void checkkey(string& str,int& n,char key,int i,int& count){
+    //base case
+    if(i>=n){
+        return ;
+    }
+    if(str[i]==key){
+        count++;
+    }
+    checkkey(str,n,key,i+1,count);
+    
+    
+    
+}
+
+int main()
+{
+string str="lovebabbar";
+int n=str.length();
+char key='b';
+int i=0;
+int count=0;
+checkkey(str,n,key,i,count);
+cout<<"the total element is"<<count;
+
+    return 0;
+}
