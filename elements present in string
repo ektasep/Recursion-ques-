@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+bool checkkey(string& str,int& n,char key,int i){
+    //base case
+    if(i>=n){
+        return false;
+    }
+    if(str[i]==key){
+        return true;
+    }
+    checkkey(str,n,key,i+1);
+    
+    
+    
+}
+
+int main()
+{
+string str="lovebabbar";
+int n=str.length();
+char key='s';
+int i=0;
+int ans=checkkey(str,n,key,i);
+if(ans==1){
+    cout<<"key found";
+}
+else{
+    cout<<"key not found";
+}
+    return 0;
+}
