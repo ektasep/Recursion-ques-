@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int binary(int arr[],int start,int end,int key){
+    int mid=(start+end)/2;
+    if(start>end){
+        return -1;
+    }
+    if(arr[mid]==key){
+        return mid;
+    }
+    if(arr[mid]<key){
+        binary(arr,mid+1,end,key);
+    }
+    else{
+        binary(arr,start,mid-1,key);
+    }
+}
+
+int main()
+{
+int arr[]={10,20,40,50,70};
+int size=5;
+int start=0;
+int end=size-1;
+int key=100;
+int ans=binary(arr,start,end,key);
+cout<<"key found at"<<ans;
+
+    return 0;
+}
