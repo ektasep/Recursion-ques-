@@ -1,0 +1,26 @@
+#include <iostream>
+#include <climits>
+
+using namespace std;
+void maxium(int arr[],int n,int i,int& maxi){
+    if(i>=n){
+        return  ;
+    }
+    if(arr[i]>maxi){
+        maxi=arr[i];
+        
+    }
+    
+    maxium(arr,n,i+1,maxi);
+}
+int main()
+{
+int arr[]={2,4,6,7,8,10};
+int n=6;
+int i=0;
+int maxi=INT_MIN;
+maxium(arr,n,i,maxi);
+cout<<"the maxium value is"<<maxi;
+
+    return 0;
+}
